@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Let's Quiz-5810405134</title>
+    <style>
+      div.output1{
+          background-color: Tomato;
+          width: 800px;
+          height: 600px;
+          border: 3px solid #F1EEA5;
+          position: absolute;
+          left: 27%;
+          top: 10%;
+      }
+      #pic1{
+        position: absolute;
+        left: 38%;
+        top: 20%;
+      }
+      p#label1{
+        position: absolute;
+        left: 43%;
+        font-size: 22px;
+      }
+      p#label2{
+        position: absolute;
+        left: 30%;
+        top: 10%;
+        font-size: 22px;
+      }
+      p#label3{
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        font-size: 40px;
+      }
+      p#label4{
+        position: absolute;
+        left: 40%;
+        top: 30%;
+        font-size: 30px;
+      }
+      p#labelQ{
+        position: absolute;
+        left: 15%;
+        top: 5%;
+        font-size: 22px;
+      }
+      p#labelNumber{
+        position: absolute;
+        left: 10%;
+        top: 5%;
+        font-size: 22px;
+      }
+      p#labelTime{
+        position: absolute;
+        left: 80%;
+        top: 5%;
+        font-size: 22px;
+      }
+      .button{
+        background-color: #F1EEA5;
+        border: none;
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+        cursor: pointer;
+        position: absolute;
+      }
+      .button1{
+        left: 15%;
+        top: 60%;
+        padding: 30px 100px;
+      }
+      .button1:hover, .button2:hover{
+        background-color: white;
+        animation: playBox1 0.75s infinite linear;
+        background: repeating-linear-gradient(45deg, #F1EEA5 0, #F1EEA5 0.25em, transparent 0.25em, transparent .5em);
+        color: adjust-hue(#F1EEA5,180);
+      }
+      @keyframes playBox1 {
+        100% {
+          background-position: 5em 0px;
+          }
+        }
+      .button2{
+        left: 55%;
+        top: 60%;
+        padding: 32px 100px;
+
+      }
+      .buttonA{
+        left: 10%;
+        top: 60%;
+        padding: 32px 100px;
+      }
+      .buttonB{
+        left: 55%;
+        top: 60%;
+        padding: 32px 100px;
+      }
+      .buttonC{
+        left: 10%;
+        top: 80%;
+        padding: 32px 100px;
+      }
+      .buttonD{
+        left: 55%;
+        top: 80%;
+        padding: 32px 100px;
+      }
+      #buttonHome{
+        left: 37%;
+        top: 70%;
+        padding: 32px 100px;
+      }
+      .buttonA:hover, .buttonB:hover, .buttonC:hover, .buttonD:hover, #buttonHome:hover{
+        background-color: white;
+        animation: playBox1 0.75s infinite linear;
+        background: repeating-linear-gradient(45deg, #F1EEA5 0, #F1EEA5 0.25em, transparent 0.25em, transparent .5em);
+        color: adjust-hue(#F1EEA5,180);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="output1">
+      <p id="label1">LET'S QUIZ!</p>
+      <p id="label2">Choose your number of question.</p>
+      <p id="label3"></p>
+      <p id="label4"></p>
+      <p id="labelTime"></p>
+      <img src="" alt="" id="pic1" style="width: 220px; height: 200px;">
+      <p id="labelQ">dddd</p>
+      <p id=labelNumber>1</p>
+      <button class="button button1" id="button1">10</button>
+      <button class="button button2" id="button2">20</button>
+      <button class="button buttonA" id="buttonA">A</button>
+      <button class="button buttonB" id="buttonB">B</button>
+      <button class="button buttonC" id="buttonC">C</button>
+      <button class="button buttonD" id="buttonD">D</button>
+      <button class="button btnHome" id="buttonHome">Home</button>
+    </div>
+
+
+    <script src="jquery-3.3.1.min.js" charset="utf-8">
+
+    </script>
+
+    <script>
+      $(document).ready(function(){
+        var q = 0;
+        var score = 0;
+        var listR = [];
+        var indexR = 0;
+        var numm = 1;
+        var timer;
+
+        function hidePageQ(){
+          $("#pic1").hide();
+          $("#labelNumber").hide();
+          $("#labelQ").hide();
+          $(".buttonA").hide();
+          $(".buttonB").hide();
+          $(".buttonC").hide();
+          $(".buttonD").hide();
+          $("#buttonHome").hide();
+        }
+
+        function question10(response, indexx){
+          // console.log("index from func: " +indexx);
+          $("#labelQ").html(response[indexx]['question']['1']);
+          $("#labelQ").show();
+          $("#labelNumber").html(numm);
+          $("#labelNumber").show();
+          // updateTimer(); /////////////////////////
+          $("#pic1").show();
+          $(".buttonA").html(response[indexx]['choices']['1']);
+          $(".buttonB").html(response[indexx]['choices']['2']);
+          $(".buttonC").html(response[indexx]['choices']['3']);
+          $(".buttonD").html(response[indexx]['choices']['4']);
+          $(".buttonA").show();
+          $(".buttonB").show();
+          $(".buttonC").show();
+          $(".buttonD").show();
+        }
+
+        function updateTimer(){
+          $("#labelTime").html(timer);
+          $("#labelTime").show();
+        }
+
+        function showHome(){
+          $("#button1").show();
+          $("#button2").show();
+          $("#label1").show();
+          $("#label2").show();
+          $("#buttonHome").hide();
+          $("#label3").hide();
+          $("#label4").hide();
+        }
+
+        function hideHome(){
+          $("#button1").hide();
+          $("#button2").hide();
+          $("#label1").hide();
+          $("#label2").hide();
+        }
+
+        function hideQue(){
+          $("#labelQ").hide();
+          $("#labelNumber").hide();
+          $("#pic1").hide();
+          $(".buttonA").hide();
+          $(".buttonB").hide();
+          $(".buttonC").hide();
+          $(".buttonD").hide();
+        }
+
+        function showScore(s){
+          $("#label4").html("Your Score is: ");
+          $("#label3").html(s);
+          $("#label4").show();
+          $("#label3").show();
+          $("#buttonHome").show();
+        }
+
+        function resetGame(){
+          score = 0;
+          indexR = 0;
+          listR = [];
+          numm = 1;
+        }
+
+        function randomNum(n){
+          numbs = [];
+          while (numbs.length < n) {
+            var x = Math.floor(Math.random() * n);
+            if (numbs.indexOf(x) > -1) continue;
+              numbs.push(x);
+          }
+            // console.log("list: "+ numbs);
+            // console.log("length: "+ numbs.length);
+
+          return numbs;
+        }
+
+        function onClickAns(response, index, list){
+          $("#buttonA").click(function(){
+              // console.log(response[listR[indexR]]['choices']['1']);
+              onSelectAns(response, listR[indexR], 1);
+              if (indexR < listR.length-1) {
+                numm += 1;
+                question10(response, list[indexR]);
+                $('#pic1').attr('src', response[list[indexR]]['image']);
+              }
+              if (indexR == listR.length-1) {
+                numm += 1;
+                question10(response, list[indexR]);
+                $('#pic1').attr('src', response[list[indexR]]['image']);
+
+              }
+              if (indexR == listR.length) {
+                // clearInterval(timer); /////////////////
+                hideQue();
+                showScore(score);
+              }
+          });
+          $("#buttonB").click(function(){
+              // console.log(response[listR[indexR]]['choices']['2']);
+              onSelectAns(response, listR[indexR], 2);
+              if (indexR < listR.length-1) {
+                numm += 1;
+                question10(response, list[indexR]);
+                $('#pic1').attr('src', response[list[indexR]]['image']);
+              }
+              if (indexR == listR.length-1) {
+                numm += 1;
+                question10(response, list[indexR]);
+                $('#pic1').attr('src', response[list[indexR]]['image']);
+
+              }
+              if (indexR == listR.length) {
+                // clearInterval(timer); ////////////////
+                hideQue();
+                showScore(score);
+              }
+          });
+          $("#buttonC").click(function(){
+              // console.log(response[listR[indexR]]['choices']['3']);
+              onSelectAns(response, listR[indexR], 3);
+              if (indexR < listR.length-1) {
+                numm += 1;
+                question10(response, list[indexR]);
+                $('#pic1').attr('src', response[list[indexR]]['image']);
+              }
+              if (indexR == listR.length-1) {
+                numm += 1;
+                question10(response, list[indexR]);
+                $('#pic1').attr('src', response[list[indexR]]['image']);
+
+              }
+              if (indexR == listR.length) {
+                // clearInterval(timer);
+                hideQue();
+                showScore(score);
+              }
+          });
+          $("#buttonD").click(function(){
+              // console.log(response[listR[indexR]]['choices']['4']);
+              onSelectAns(response, listR[indexR], 4);
+              if (indexR < listR.length-1) {
+                numm += 1;
+                question10(response, list[indexR]);
+                $('#pic1').attr('src', response[list[indexR]]['image']);
+              }
+              if (indexR == listR.length-1) {
+                numm += 1;
+                question10(response, list[indexR]);
+                $('#pic1').attr('src', response[list[indexR]]['image']);
+
+              }
+              if (indexR == listR.length) {
+                // clearInterval(timer);
+                hideQue();
+                showScore(score);
+              }
+          });
+        }
+
+        function onSelectAns(response, index, ans){
+            // console.log("from select "+ response[index]['choices'][ans]);
+            // console.log("left: "+response[index]['choices'][ans]);
+            // console.log("right: "+response[index]['question']['2']);
+            if(response[index]['choices'][ans] === response[index]['question']['2']){
+              // console.log("correct ans");
+              score += 1;
+              // console.log("score "+score );
+            }
+            else {
+              // console.log("wrong");
+            }
+            indexR = indexR + 1;
+        }
+
+        function startGame(response, listR, indexR){
+          question10(response, listR[indexR]);
+          $('#pic1').attr('src', response[listR[indexR]]['image']);
+          onClickAns(response, listR[indexR], listR);
+        }
+
+        $.ajax({
+          url: 'data.json',
+          method: 'GET',
+          dataType: 'json',
+          success: function(response){
+            hidePageQ();
+            // console.log(response);
+            // console.log(response[0]['question']['2']);
+            // console.log(response[1]['choices']['3']);
+            $("#button1").click(function(){
+              hideHome();
+              q = 10;
+              // console.log("q from outside" + q);
+              // resetGame();
+              listR = randomNum(10);
+              // console.log("listR 0: "+ listR[indexR]);
+              // timer = setInterval(function(){
+              //   startGame(response, listR, indexR);
+              //   updateTimer();//////////////////
+              // }, 1000);
+              startGame(response, listR, indexR);
+            });
+            $("#button2").click(function(){
+              hideHome();
+              q = 20;
+              // resetGame();
+              listR = randomNum(20);
+              startGame(response, listR, indexR);
+            });
+            console.log("before if: " +q);
+
+            $("#buttonHome").click(function(){
+              resetGame();
+              showHome();
+            });
+          }
+        });
+      });
+
+    </script>
+
+  </body>
+</html>

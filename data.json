@@ -1,0 +1,102 @@
+[
+  {
+    "image" : "https://seeklogo.com/images/M/mcdonald-s-logo-255A7B5646-seeklogo.com.png",
+    "question" : {"1":"What brand is this?" ,"2":"McDonald"},
+    "choices" : {"1":"KFC", "2":"Burger King", "3":"Subway", "4":"McDonald"}
+  },
+  {
+    "image" : "https://seeklogo.com/images/M/mcdonald-s-logo-255A7B5646-seeklogo.com.png",
+    "question" : {"1":"What slogan is this?" ,"2":"I'm Lovin' It"},
+    "choices" : {"1":"Eat Fresh", "2":"I'm Lovin' It", "3":"Finger Lickin’ Good", "4":"Taste the Rainbow"}
+  },
+  {
+    "image" : "http://www.multivu.com/players/English/7896151-subway-new-logo/image/new-subway%C2%AE-restaurants-symbol-6-HR.jpg",
+    "question" : {"1":"What brand is this?" ,"2":"Subway"},
+    "choices" : {"1":"KFC", "2":"Burger King", "3":"Subway", "4":"McDonald"}
+  },
+  {
+    "image" : "http://www.multivu.com/players/English/7896151-subway-new-logo/image/new-subway%C2%AE-restaurants-symbol-6-HR.jpg",
+    "question" : {"1":"What slogan is this?" ,"2":"Eat Fresh"},
+    "choices" : {"1":"Eat Fresh", "2":"I'm Lovin' It", "3":"Finger Lickin’ Good", "4":"Taste the Rainbow"}
+  },
+  {
+    "image" : "http://clipart-library.com/data_images/249128.png",
+    "question" : {"1":"What brand is this?" ,"2":"KFC"},
+    "choices" : {"1":"KFC", "2":"Burger King", "3":"Subway", "4":"McDonald"}
+  },
+  {
+    "image" : "http://clipart-library.com/data_images/249128.png",
+    "question" : {"1":"What slogan is this?" ,"2":"Finger Lickin’ Good"},
+    "choices" : {"1":"Eat Fresh", "2":"I'm Lovin' It", "3":"Finger Lickin’ Good", "4":"Taste the Rainbow"}
+  },
+  {
+    "image" : "https://images-na.ssl-images-amazon.com/images/I/21QBuVL6w0L._SL500_AC_SS350_.jpg",
+    "question" : {"1":"What brand is this?" ,"2":"Nike"},
+    "choices" : {"1":"Adidas", "2":"Converse", "3":"Nike", "4":"Vans"}
+  },
+  {
+    "image" : "https://images-na.ssl-images-amazon.com/images/I/21QBuVL6w0L._SL500_AC_SS350_.jpg",
+    "question" : {"1":"What slogan is this?" ,"2":"Just Do It"},
+    "choices" : {"1":"Just Do It", "2":"Impossible is Nothing", "3":"Shoes Are Boring. Wear Sneakers", "4":"Off the Wall"}
+  },
+  {
+    "image" : "http://rs866.pbsrc.com/albums/ab223/FTW_2010/adidas.jpg?w=280&h=210&fit=crop",
+    "question" : {"1":"What brand is this?" ,"2":"Adidas"},
+    "choices" : {"1":"Adidas", "2":"Converse", "3":"Nike", "4":"Vans"}
+  },
+  {
+    "image" : "http://rs866.pbsrc.com/albums/ab223/FTW_2010/adidas.jpg?w=280&h=210&fit=crop",
+    "question" : {"1":"What slogan is this?" ,"2":"Impossible is Nothing"},
+    "choices" : {"1":"Just Do It", "2":"Impossible is Nothing", "3":"Shoes Are Boring. Wear Sneakers", "4":"Off the Wall"}
+  },
+  {
+    "image" : "http://1.bp.blogspot.com/-Fbrr68tKoaA/VcMZiLnIC6I/AAAAAAAACPk/VeOGBsMCbn8/s1600/converse-star-chveron.jpg",
+    "question" : {"1":"What brand is this?" ,"2":"Converse"},
+    "choices" : {"1":"Adidas", "2":"Converse", "3":"Nike", "4":"Vans"}
+  },
+  {
+    "image" : "http://1.bp.blogspot.com/-Fbrr68tKoaA/VcMZiLnIC6I/AAAAAAAACPk/VeOGBsMCbn8/s1600/converse-star-chveron.jpg",
+    "question" : {"1":"What slogan is this?" ,"2":"Shoes Are Boring. Wear Sneakers"},
+    "choices" : {"1":"Just Do It", "2":"Impossible is Nothing", "3":"Shoes Are Boring. Wear Sneakers", "4":"Off the Wall"}
+  },
+  {
+    "image" : "https://image.freepik.com/free-icon/apple-logo_318-40184.jpg",
+    "question" : {"1":"What brand is this?" ,"2":"Apple"},
+    "choices" : {"1":"Samsung", "2":"Apple", "3":"Oppo", "4":"Blackberry"}
+  },
+  {
+    "image" : "http://www.carlogos.org/logo/Mercedes-Benz-logo.png",
+    "question" : {"1":"What brand is this?" ,"2":"Benz"},
+    "choices" : {"1":"BMW", "2":"Volkswagen", "3":"Benz", "4":"Toyota"}
+  },
+  {
+    "image" : "https://i.pinimg.com/originals/fb/95/9e/fb959e5281ca4da91e67d369b216c34c.jpg",
+    "question" : {"1":"What brand is this?" ,"2":"Volkswagen"},
+    "choices" : {"1":"BMW", "2":"Volkswagen", "3":"Benz", "4":"Toyota"}
+  },
+  {
+    "image" : "https://i.pinimg.com/originals/29/f4/77/29f47725986f8f2aa3296b2bd72d696f.jpg",
+    "question" : {"1":"What brand is this?" ,"2":"Toyota"},
+    "choices" : {"1":"BMW", "2":"Volkswagen", "3":"Benz", "4":"Toyota"}
+  },
+  {
+    "image" : "http://logok.org/wp-content/uploads/2014/06/Maserati-logo-Trident.png",
+    "question" : {"1":"What brand is this?" ,"2":"Maserati"},
+    "choices" : {"1":"BMW", "2":"Volkswagen", "3":"Benz", "4":"Maserati"}
+  },
+  {
+    "image" : "http://pngimg.com/uploads/car_logo/car_logo_PNG1640.png",
+    "question" : {"1":"What brand is this?" ,"2":"Audi"},
+    "choices" : {"1":"Audi", "2":"Volkswagen", "3":"Benz", "4":"Maserati"}
+  },
+  {
+    "image" : "http://logok.org/wp-content/uploads/2014/08/Redbull-logo-880x660.png",
+    "question" : {"1":"What brand is this?" ,"2":"Redbull"},
+    "choices" : {"1":"Uniff", "2":"Fanta", "3":"Redbull", "4":"Perrier"}
+  },
+  {
+    "image" : "http://www.freestencilgallery.com/wp-content/uploads/2014/09/Jaguar-Logo-Stencil-thumb-1.jpg",
+    "question" : {"1":"What brand is this?" ,"2":"Jaguar"},
+    "choices" : {"1":"Audi", "2":"Jaguar", "3":"Benz", "4":"Maserati"}
+  }
+]
